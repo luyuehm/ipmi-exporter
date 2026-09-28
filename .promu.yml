@@ -29,4 +29,4 @@ crossbuild:
         - netbsd
         - openbsd
         # Disable windows: undefined: syscall.Mkfifo
-        # - windows
+        - windows

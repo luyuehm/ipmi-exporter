@@ -28,7 +28,6 @@ import (
 	"regexp"
 	"strconv"
 	"strings"
-	"syscall"
 )
 
 var (
@@ -129,7 +128,7 @@ func freeipmiConfigPipe(config string, logger *slog.Logger) (string, error) {
 	if err != nil {
 		return "", err
 	}
-	err = syscall.Mkfifo(pipe, 0600)
+	err = mkfifo(pipe, 0600)
 	if err != nil {
 		return "", err
 	}
